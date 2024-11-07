@@ -79,7 +79,7 @@ ORDER BY date
 ''' 
 with t_revenue as (SELECT date, sum(price) as revenue, count (distinct order_id) as orders
                    FROM (SELECT order_id, creation_time :: date as date, unnest(product_ids) as product_id
-                         FROM   orders) t
+                         FROM orders) t
                        LEFT JOIN products using (product_id)
                    WHERE order_id not in (SELECT order_id
                                           FROM user_actions
@@ -122,10 +122,10 @@ ORDER BY date;
 SELECT product_name,
        sum (revenue) as revenue,
        sum (share_in_revenue) as share_in_revenue
-FROM (SELECT case when round (100*revenue::decimal/sum (revenue) OVER (), 2) < 0.5 then 'ДРУГОЕ'
+FROM (SELECT case when round (100 * revenue::decimal/sum (revenue) OVER (), 2) < 0.5 then 'ДРУГОЕ'
              else name end as product_name,
              revenue,
-             round (100*revenue::decimal/sum (revenue) OVER (), 2) as share_in_revenue
+             round (100 * revenue::decimal/sum (revenue) OVER (), 2) as share_in_revenue
         FROM (SELECT name,
                        sum(price) as revenue
               FROM (SELECT date, order_id, product_id, name, price
