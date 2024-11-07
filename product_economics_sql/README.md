@@ -29,8 +29,8 @@ couriers - информация о курьерах (courier_id, birth_date, sex
 
 products - информация о продукт (product_id, name, price)  
 
-<img src="https://github.com/marisha-gulina/portfolio/blob/main/assets/sql_task_1.png" width="400" height="400" />
+<img src="https://github.com/marisha-gulina/portfolio/blob/main/assets/sql_task_1.png" width="1040" height="400" />
 
-<img src="https://github.com/marisha-gulina/portfolio/blob/main/assets/sql_task_2-3.png" width="400" height="400" />
+<img src="https://github.com/marisha-gulina/portfolio/blob/main/assets/sql_task_2-3.png" width="1040" height="400" />
 
-<img src="https://github.com/marisha-gulina/portfolio/blob/main/assets/sql_task_4.png" width="400" height="400" />
+<img src="https://github.com/marisha-gulina/portfolio/blob/main/assets/sql_task_4.png" width="1040" height="400" />
